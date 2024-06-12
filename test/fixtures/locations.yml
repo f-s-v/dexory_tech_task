@@ -1,0 +1,22 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Location1
+
+two:
+  name: Location2
+
+three:
+  name: Location3
+
+four:
+  name: Location4
+
+five:
+  name: Location5
+
+six:
+  name: Locatio6
+
+seven:
+  name: Location7

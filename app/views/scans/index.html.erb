@@ -1,0 +1,24 @@
+<h1>Scans</h1>
+
+<div id="scans">
+  <% @scans.each do |scan| %>
+    <div id="<%= dom_id scan %>">
+      <h4>Scan @ <%= l scan.created_at, format: :short %></h4>
+      <% if scan.comparison_reports.present?  %>
+        <p>Reports:</p>
+        <ul>
+          <% scan.comparison_reports.each do |report| %>
+            <li><%= link_to l(report.created_at), [scan, report] %></li>
+          <% end %>
+        </ul>
+        <p>
+          <%= link_to t(:new_report), new_scan_comparison_report_path(scan) %>
+        </p>
+      <% else %>
+        <p><%= t(:empty_reports_message) %></p>
+        <p><%= link_to t(:new_report), new_scan_comparison_report_path(scan) %></p>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+

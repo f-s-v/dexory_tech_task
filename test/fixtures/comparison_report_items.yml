@@ -1,0 +1,16 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+empty:
+  location: one
+  expected_barcodes: []
+  comparison_report: one
+
+one:
+  location: one
+  expected_barcodes: [Barcode1]
+  comparison_report: one
+
+two:
+  location: one
+  expected_barcodes: [Barcode2]
+  comparison_report: one

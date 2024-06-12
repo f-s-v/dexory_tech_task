@@ -1,0 +1,21 @@
+<table id="<%= dom_id comparison_report %>" class="comparison-report">
+  <tr>
+    <th><%= t :location_name %></th>
+    <th><%= t :expected_barcodes %></th>
+    <th><%= t :detected_barcodes %></th>
+    <th><%= t :scanned %></th>
+    <th><%= t :occupied %></th>
+    <td></td>
+  </tr>
+  <% report_items.each do |item| %>
+    <% (status, success) = comparison_report_item_status(item) %>
+    <tr class="<%= success ? 'report-success' : 'report-error' %>">
+      <td title="<%= t :location_name %>"><%= item.location.name %></td>
+      <td title="<%= t :expected_barcodes %>"><%= item.expected_barcodes.join(', ') %></td>
+      <td title="<%= t :detected_barcodes %>"><%= item.detected_barcodes != item.expected_barcodes ? item.detected_barcodes.join(', ') : nil %></td>
+      <td title="<%= t :scanned %>"><%= item.scanned ? '✅' : '' %></td>
+      <td title="<%= t :occupied %>"><%= item.occupied ? '✅' : ''%></td>
+      <td><%= t status %></td>
+    </tr>
+  <% end %>
+</table>

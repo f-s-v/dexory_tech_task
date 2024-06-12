@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  max-width: 18cm;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.report-error {
+  background: pink;
+}
+
+.simple_form {
+  .input, .button {
+    margin-bottom: 1rem;
+  }
+}
+
+.comparison-report {
+  td:not(:last-of-type) {
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+  }
+}

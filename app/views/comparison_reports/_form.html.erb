@@ -1,0 +1,4 @@
+<%= simple_form_for [@scan, comparison_report] do |form| %>
+  <%= form.input :report_csv, as: :file %>
+  <%= form.button :submit %>
+<% end %>

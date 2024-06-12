@@ -28,4 +28,18 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  empty_reports_message: No reports has been submitted yet
+  location_name: Location
+  expected_barcodes: Expected Barcodes
+  detected_barcodes: Detected Barcodes (if different)
+  scanned: Scanned
+  occupied: Occupied
+  not_scanned_empty_expected: The location hasn't been scanned, and it was empty
+  occupied_no_barcodes: The location was occupied, but no barcode could be identified
+  not_scanned_empty_unexpected: The location hasn't been scanned, but it should have been occupied
+  empty_expected: The location was empty, as expected
+  empty_unexpected: The location was empty, but it should have been occupied
+  occupied_correct: The location was occupied by the expected items
+  occupied_incorrect: The location was occupied by the wrong items
+  occupied_wrong: The location was occupied by an item, but should have been empty
+  new_report: Upload new report

@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+not_scanned:
+  location: one
+  scan: one
+  occupied: false
+  scanned: false
+  detected_barcodes: []
+
+occupied_no_barcodes:
+  location: one
+  scan: one
+  occupied: true
+  scanned: true
+  detected_barcodes: []
+
+empty:
+  location: one
+  scan: one
+  occupied: false
+  scanned: true
+  detected_barcodes: []
+
+one:
+  location: one
+  scan: one
+  occupied: true
+  scanned: true
+  detected_barcodes: [Barcode1]
